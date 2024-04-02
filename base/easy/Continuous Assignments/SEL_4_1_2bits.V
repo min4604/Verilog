@@ -1,10 +1,10 @@
-/*	4-2 SELECTOR
+/*	4-1 2bits SELECTOR
 	When SEL = 00b then OUT = A
 	When SEL = 01b then OUT = B
 	When SEL = 10b then OUT = C
 	When SEL = 11b then OUT = D	*/
-module	SEL_4_2	( A, B, C, D, SEL, OUT );
-input	[1:0] A, B, C, D, SEL;					//Set 4*2bits array input
+module	SEL_4_1_2bits	( A, B, C, D, SEL, OUT );
+input	[1:0] A, B, C, D, SEL;					//Set 4 of 2bits array input
 output	[1:0]OUT;								//Set 2bits array output
 
 	assign	OUT[1] = ~SEL[1] & ~SEL[0] & A[1]	// and : & ; or : | ; not : ~ ;
